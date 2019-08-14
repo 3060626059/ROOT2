@@ -14,10 +14,10 @@ import root.tool.xtool;
 
 
  
-@WebServlet("/index")
-public class index_root extends HttpServlet {
+@WebServlet(name = "index",urlPatterns = {"/index",""})
+public class index extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    public index_root() {
+    public index() {
     	//不要把访问路径设置成 / 
     	//设置成跟服务的话 css js 需要自己写下载代码
         super();
